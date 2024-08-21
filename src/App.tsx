@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Header from './components/Header';
+import TableContainer from "./components/TableContainer";
 
 const App: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const App: React.FC = () => {
         <Header />
         <main>
           <p>Добро пожаловать на главную страницу!</p>
+            <TableContainer />
           {/* Здесь может быть основной контент страницы */}
         </main>
       </div>
