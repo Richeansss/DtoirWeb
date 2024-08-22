@@ -1,0 +1,27 @@
+.task-manager {
+  padding: 10px;
+}
+
+.task-manager__nav__list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.task-manager__nav__list__item {
+  padding: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.task-manager__nav__list__item:first-child {
+  border-left: 1px solid #e5e5e5;
+}
+
+.task-manager__nav__list__item:last-child {
+  border-right: 1px solid #e5e5e5;
+}
+
+.task-manager__content {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+}
