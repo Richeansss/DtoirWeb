@@ -1,0 +1,24 @@
+.table-page__container {
+  padding: 0 20px;
+}
+
+.table-page__button-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 5px;
+}
+
+.table-page__button-list__btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.table-page__button-list__btn:hover {
+  background-color: #0056b3;
+}
