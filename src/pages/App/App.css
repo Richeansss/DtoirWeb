@@ -1,0 +1,24 @@
+.app__container {
+  padding: 0 20px;
+}
+
+.app__button-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 5px;
+}
+
+.app__button-list__btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.app__button-list__btn:hover {
+  background-color: #0056b3;
+}
