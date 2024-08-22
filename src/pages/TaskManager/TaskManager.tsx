@@ -1,16 +1,12 @@
 import { FC, useState } from 'react'
 import './TaskManager.css'
-import { EmployeeList } from '../../components'
-
-const data = [
-  { id: 1, name: 'Иван Иванов' },
-  { id: 2, name: 'Петр Петров' },
-  { id: 3, name: 'Сидор Сидоров' },
-]
+import { EmployeeList, TaskList } from '../../components'
+import { dataEmployees, dataTaskAssignments, dataTasks } from '../../store/data'
 
 const TaskManager: FC = () => {
   const [selectedPage, setSelectedPage] = useState(0)
-  const [employees, setEmployees] = useState(data)
+  const [employees, setEmployees] = useState(dataEmployees)
+  const [tasks, setTasks] = useState(dataTasks)
 
   const handleNavButtonClick = (pageId: number) => {
     setSelectedPage(pageId)
@@ -27,6 +23,20 @@ const TaskManager: FC = () => {
     if (employees.length > 0) {
       const updatedEmployees = employees.filter((_, i) => i !== index)
       setEmployees(updatedEmployees)
+    }
+  }
+
+  const addTask = (title: string, startDate: string, endDate: string, status: string) => {
+    if (title.trim()) {
+      const newTask = { id: tasks.length + 1, title, startDate, endDate, status }
+      setTasks([...tasks, newTask])
+    }
+  }
+
+  const removeTask = (index: number) => {
+    if (tasks.length > 0) {
+      const updatedTasks = tasks.filter((_, i) => i !== index)
+      setTasks(updatedTasks)
     }
   }
 
@@ -61,7 +71,15 @@ const TaskManager: FC = () => {
         {selectedPage === 0 && (
           <EmployeeList employees={employees} onAdd={addEmployee} onDelete={removeEmployee} />
         )}
-        {selectedPage === 1 && <div>Здесь будут задачи</div>}
+        {selectedPage === 1 && (
+          <TaskList
+            employees={employees}
+            tasks={tasks}
+            taskAssignments={dataTaskAssignments}
+            onAdd={addTask}
+            onDelete={removeTask}
+          />
+        )}
         {selectedPage === 2 && <div>Здесь будет календарь</div>}
       </div>
     </div>

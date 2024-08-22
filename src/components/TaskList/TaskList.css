@@ -1,0 +1,111 @@
+.task-list__table {
+  width: 100%;
+}
+
+.task-list__table__container {
+  display: block;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid black;
+}
+
+.task-list__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task-list__select {
+  margin-left: 15px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.task-list__table__header__row__item {
+  font-weight: normal;
+  font-size: 15px;
+  border-left: 1px solid #e5e5e5;
+  padding: 5px 10px;
+}
+
+.task-list__table__header__row__item:first-child {
+  border-left: none;
+}
+
+.task-list__table__body__row__item {
+  font-weight: normal;
+  font-size: 15px;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px;
+}
+
+.task-list__table__body__row__item:first-child {
+  border-left: none;
+}
+
+.task-list__table__body__row:last-child .task-list__table__body__row__item {
+  border-bottom: none;
+}
+
+.task-list__footer {
+  margin-top: 10px;
+}
+
+.task-list__footer__item {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.task-list__footer__item label {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.task-list__footer__item label span {
+  display: block;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.task-list__footer__item label input,
+.task-list__footer__item label select {
+  border: 1px solid #e5e5e5;
+  height: 25px;
+  padding: 5px;
+  flex-grow: 1;
+}
+
+.task-list__footer__item label select {
+  margin-left: 0;
+}
+
+.task-list__footer__item__button-list {
+  display: flex;
+  column-gap: 20px;
+  margin-left: 20px;
+}
+
+.task-list__foter__button-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+
+.task-list__footer__button-list__item,
+.task-list__footer__item__button-list__item {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.task-list__footer__button-list__item:hover,
+.task-list__footer__item__button-list__item:hover {
+  background-color: #0056b3;
+}

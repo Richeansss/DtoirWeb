@@ -1,10 +1,6 @@
 import { FC, useCallback, useEffect, useState } from 'react'
 import './EmployeeList.css'
-
-interface IEmployee {
-  id: number
-  name: string
-}
+import { IEmployee } from '../../types/types'
 
 interface IEmployeeListProps {
   employees: IEmployee[]
