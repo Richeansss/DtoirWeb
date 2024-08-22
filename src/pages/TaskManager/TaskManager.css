@@ -11,6 +11,7 @@
 .task-manager__nav__list__item {
   padding: 10px;
   border-top: 1px solid #e5e5e5;
+  cursor: pointer;
 }
 
 .task-manager__nav__list__item:first-child {
